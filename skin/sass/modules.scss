@@ -1,0 +1,192 @@
+.page-home-hero {
+    img {
+        width: 100%;
+    }
+}
+
+.product-list {
+    .product-list__item {
+        width: 24%;
+        margin: 0 1.33% 20px 0;
+        text-align: center;
+        &:nth-child(4n) {
+            margin: 0 0 20px 0;
+        }
+        a {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+            .name {
+                text-transform: uppercase;
+                font-weight: $fw_bold;
+                margin: 10px 0 5px 0;
+            }
+            .price {
+                font-size: $fs_small;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.product-data {
+    margin: 0 0 40px 0;
+    .product-media {
+        width: 55%;
+        .product-media__main {
+            img {
+                width: 100%;
+            }
+        }
+        .product-media__views {
+            img {
+                display: block;
+                width: 24%;
+                padding: 0;
+                margin: 1.33% 1.33% 0 0;
+                &:last-child {
+                    margin: 1.33% 0 0 0;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .product-info {
+        width: 42%;
+        color: $color_dark;
+        .product-info__name {
+            margin: 0 0 20px 0;
+            text-transform: uppercase;
+            font-size: $fs_xlarge;
+            font-weight: $fw_bold;
+        }
+        .product-info__price {
+            margin: 0 0 20px 0;
+            font-style: italic;
+        }
+        .product-info__description {
+            margin: 0 0 20px 0;
+            text-transform: normal;
+        }
+        .product-cart {
+            margin: 40px 0 0 0;
+            .product-cart__quantity {
+                select {
+                    width: 75px;
+                }
+            }
+            .product-cart__add {
+                margin: 20px 0 0 0;
+                padding: 20px 0;
+                background: $color_dark;
+                color: $color_white;
+                text-transform: uppercase;
+                text-align: center;
+                font-weight: $fw_bold;
+                &:hover {
+                    cursor: pointer;
+                    background: $color_dark_hover;
+                }
+            }
+            .product-cart__message {
+                text-align: center;
+                margin: 20px 0 0 0;
+                font-size: $fs_small;
+                text-transform: uppercase;
+                a {
+                    font-weight: $fw_bold;
+                }
+            }
+        }
+    }
+}
+
+.cart {
+    .cart__item {
+        margin: 0 0 20px 0;
+        padding: 0 0 20px 0;
+        border-bottom: solid 2px $color_light;
+        text-align: center;
+        &.cart__item--body {
+            .name {
+                padding: 12px 0 0 0;
+            }
+            .price {
+                font-style: italic;
+                padding: 12px 0 0 0;
+            }
+            .subtotal {
+                font-style: italic;
+                padding: 12px 0 0 0;
+            }
+            .remove {
+                padding: 12px 0 0 0;
+
+            }
+        }
+        .cart__column {
+            width: 16.66%;
+            img {
+                width: 100%;
+            }
+            input {
+                width: 100px;
+                text-align: center;
+            }
+        }
+    }
+}
+.cart-lower {
+    .cart-lower__buttons {
+
+    }
+    .cart-lower__totals {
+        .cart-lower__subtotal {
+            margin: 0 0 40px 0;
+            font-size: $fs_large;
+            font-weight: $fw_bold;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+.about-content {
+    .left {
+        width: 40%;
+        img {
+            width: 100%;
+        }
+    }
+    .right {
+        width: 58%;
+    }
+}
+
+
+.contact-content {
+    .left {
+        width: 49%;
+        input {
+            width: 100%;
+            &[type="submit"] {
+                width: 200px;
+            }
+        }
+        textarea {
+            width: 100%;
+        }
+        .submit-message {
+            text-transform: uppercase;
+        }
+    }
+    .right {
+        width: 49%;
+        img {
+            width: 100%;
+        }
+    }
+}

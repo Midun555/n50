@@ -1,0 +1,72 @@
+form {
+    *:focus {
+        outline: none;
+    }
+    .form-row {
+        margin: 0 0 20px 0;
+    }
+}
+
+label {
+    display: block;
+    margin: 20px 0 5px 0;
+    text-transform: uppercase;
+    font-weight: $fw_bold;
+    font-size: $fs_small;
+    color: $color_black;
+}
+
+input {
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 0;
+    border: solid 2px $color_light;
+    vertical-align: top;
+    color: $color_dark;
+    font-size: $fs_small;
+    &[type="text"] { }
+    &[type="password"] { }
+    &[type="email"] { }
+    &[type="submit"] {
+        border: none;
+        padding: 20px 0;
+        background: $color_dark;
+        color: $color_white;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: $fw_bold;
+        &:hover {
+            cursor: pointer;
+            background: $color_dark_hover;
+        }
+    }
+}
+
+textarea {
+    padding: 10px 20px;
+    border-radius: 0;
+    border: solid 2px $color_light;
+    vertical-align: top;
+    color: $color_dark;
+    font-size: $fs_small;
+    min-height: 200px;
+    resize: none;
+}
+
+select {
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    padding: 10px 20px;
+    width: 200px;
+    vertical-align: top;
+    background: $color_light;
+    color: $color_dark;
+    font-size: $fs_small;
+    text-transform: uppercase;
+    background: #cccccc url("/skin/images/dropdown-arrow.png") no-repeat 95% center;
+    -webkit-background-size: 25px 15px;
+    background-size: 25px 25px;
+}

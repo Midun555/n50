@@ -1,0 +1,33 @@
+body {
+    background: #ddd;
+}
+h1 {
+    text-transform: uppercase;
+}
+textarea {
+    resize: none;
+}
+
+
+
+
+/* HELPER CLASSES */
+.n50-top-buffer-xs { margin-top: 10px; }
+.n50-top-buffer-sm { margin-top: 20px; }
+.n50-top-buffer-md { margin-tosp: 30px; }
+.n50-top-buffer-lg { margin-top: 40px; }
+
+.n50-header-wrapper {
+    width: 100%;
+    background: #fff;
+    padding: 40px 0 0 0;
+}
+.n50-body-wrapper {
+    background: #fff;
+    padding: 0 0 60px 0;
+}
+.n50-footer-wrapper {
+    width: 100%;
+    background: #ddd;
+    padding: 0 0 40px 0;
+}

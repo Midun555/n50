@@ -1,0 +1,44 @@
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.clearer {
+    clear: both;
+}
+.clearfix {
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.heading {
+    margin: 0 0 40px 0;
+    font-family: $ff_sansserif;
+    text-transform: uppercase;
+    font-weight: $fw_bold;
+    font-size: $fs_large;
+    color: $color_black;
+    padding: 0 0 10px 20px;
+    border-bottom: solid 2px $color_light;
+}
+.copy {
+    margin: 10px 0;
+    font-family: $ff_copy;
+    text-transform: none;
+    font-weight: $fw_normal;
+    font-size: $fs_medium;
+    color: $color_dark;
+    line-height: 1.2;
+}
+.label {
+    margin: 20px 0 5px 0;
+    font-family: $ff_sansserif;
+    text-transform: uppercase;
+    font-weight: $fw_bold;
+    font-size: $fs_small;
+    color: $color_black;
+}
