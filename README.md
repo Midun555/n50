@@ -29,9 +29,12 @@
 - [x] add 'builder' column to CSV and db
 - [x] add featured (homepage) column to CSV
 - [x] integrate address validation via UPS
+- [x] add constants in init.php for document root, etc.
+- [x] add status as condition for all product queries
+- [x] adjust htaccess and folder structure for GoDaddy subdomains
+- [x] style footer
 
-- [ ] add status as condition for all product queries
-- [ ] style header, footer, homepage
+- [ ] style homepage
+- [ ] style header
 - [ ] refactor checkout models (move to shipping/payment models)
 - [ ] integrate shipping rate calculation via UPS
-- [ ] add constant in init.php for document root, etc.
