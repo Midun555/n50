@@ -24,7 +24,7 @@
                             <img src="/media/products/placeholder.jpg" class="img-responsive"/>
                         </a>
                     </div>
-                    <div class="col-sm-5 col-xs-12">
+                    <div class="col-sm-5 col-xs-12 n50-bottom-buffer-xs">
                         <a href="/product/<?php echo $product['slug'] ?>/">
                             <h4><?php echo $product['name'] ?></h4>
                         </a>
@@ -57,12 +57,12 @@
             </div>
 
             <div class="row n50-top-buffer-md">
-                <div class="col-xs-3 hidden-xs">
-                    <input type="submit" value="Update Cart" class="btn btn-info btn-block">
+                <div class="col-sm-3 col-xs-6 n50-bottom-buffer-sm">
+                    <input type="submit" value="Update Cart" class="btn btn-info">
                 </div>
                 <div class="col-xs-6 hidden-xs">&nbsp;</div>
-                <div class="col-sm-3 col-xs-12">
-                    <a href="/checkout/" class="btn btn-success btn-block">Checkout</a>
+                <div class="col-sm-3 col-xs-6 text-right">
+                    <a href="/checkout/" class="btn btn-success">Checkout</a>
                 </div>
             </div>
 

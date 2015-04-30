@@ -33,6 +33,11 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
 .n50-top-buffer-sm { margin-top: 20px; }
 .n50-top-buffer-xs { margin-top: 10px; }
 
+.n50-bottom-buffer-lg { margin-bottom: 40px; }
+.n50-bottom-buffer-md { margin-bottom: 30px; }
+.n50-bottom-buffer-sm { margin-bottom: 20px; }
+.n50-bottom-buffer-xs { margin-bottom: 10px; }
+
 /* CUSTOM SECTIONS */
 .n50-header-wrapper {
     width: 100%;

@@ -15,7 +15,7 @@
     <div class="container">
         <div class="logo text-center">
             <a href="/">
-                <img src="/skin/images/logo-diamond.png" alt="n50" width="200">
+                <!-- <img src="/skin/images/logo-diamond.png" alt="n50" width="200"> -->
             </a>
         </div>
         <nav class="navbar navbar-default n50-top-buffer-md">

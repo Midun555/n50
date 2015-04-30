@@ -36,7 +36,8 @@ abstract class Controller
 
     public function loadBlock($block, $data = false)
     {
-        $this->block_data = $data;
+        if ( $data )
+            $this->block_data = $data;
 
         if ( file_exists(DOCUMENT_ROOT . '/app/views/blocks/' . $block . '.php') )
             require_once DOCUMENT_ROOT . '/app/views/blocks/' . $block . '.php';

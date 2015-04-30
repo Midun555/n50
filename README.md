@@ -21,11 +21,12 @@
 
 # TODO
 
-- [ ] fix cart page on mobile
-- [ ] style homepage
-- [ ] style header
 - [ ] integrate shipping rate calculation via UPS
+- [ ] set up password protected admin panel
 
+- [x] style homepage
+- [x] style header
+- [x] fix cart page on mobile
 - [x] add loadBlock method to controller for reusable blocks
 - [x] implement bootstrap into frontend
 - [x] integrate Stripe as payment

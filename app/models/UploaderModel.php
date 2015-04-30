@@ -63,7 +63,7 @@ class UploaderModel extends Model
 
             $row['slug'] = $this->_generateSlug($row['name']);
 
-            if ( $this->_skuFoundInDb($row['sku']) )
+            if ( $this->_isSkuFoundInDb($row['sku']) )
             {
                 $sql = "UPDATE `" . self::PRODUCTS . "`
                         SET " . $this->prepareUpdateString($row) . "
@@ -129,7 +129,7 @@ class UploaderModel extends Model
     }
 
 
-    private function _skuFoundInDb($sku)
+    private function _isSkuFoundInDb($sku)
     {
         $sql = "SELECT *
                 FROM `" . self::PRODUCTS . "`

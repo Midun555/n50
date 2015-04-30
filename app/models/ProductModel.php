@@ -98,4 +98,24 @@ class ProductModel extends Model
         return $result;
     }
 
+    public function getFeaturedCollection()
+    {
+        $sql = "SELECT *
+                FROM `" . self::PRODUCTS . "`
+                WHERE
+                    `featured` = 1 AND
+                    `status` = 1
+                ORDER BY RAND()
+                LIMIT 4";
+
+        $result = $this->db->query($sql);
+
+        for ( $i = 0; $i < count($result); $i++ )
+        {
+            $result[$i]['image'] = $this->getImages($result[$i]['sku'], true);
+        }
+
+        return $result;
+    }
+
 }
