@@ -1,6 +1,6 @@
 <?php
 
-class StripeModel extends model
+class PaymentModel extends model
 {
 
     public function charge($data)

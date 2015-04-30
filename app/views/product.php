@@ -3,19 +3,15 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-6 col-xs-12">
-            <div class="panel panel-default">
-                <div class="panel-body">
-                    <img src="/media/products/placeholder.jpg" class="img-responsive">
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <?php for ( $i = 0; $i < 4; $i++ ) : ?>
-                            <div class="col-xs-3">
-                                <img src="/media/products/placeholder.jpg" class="img-responsive">
-                            </div>
-                        <?php endfor; ?>
+            <div>
+                <img src="/media/products/placeholder-1.jpg" class="img-responsive" id="js-pdp-media-main">
+            </div>
+            <div class="row">
+                <?php for ( $i = 1; $i <= 4; $i++ ) : ?>
+                    <div class="col-xs-3 n50-top-buffer-md">
+                        <img src="/media/products/placeholder-<?php echo $i ?>.jpg" class="img-responsive" id="js-pdp-media-view">
                     </div>
-                </div>
+                <?php endfor; ?>
             </div>
         </div>
         <div class="col-sm-6 col-xs-12">
@@ -23,7 +19,7 @@
                 <h1><?php echo $product['name'] ?></h1>
             </div>
             <p><em>$<?php echo $product['price'] ?></em></p>
-            <p>Build time: <?php echo $product['build_time'] ?> days</p>
+            <p>Estimate build time: <?php echo $product['build_time'] ?> days</p>
             <p><?php echo $product['description'] ?></p>
             <form action="/cart/add_item/" method="post">
                 <input type="hidden" name="product_id" value="<?php echo $product['id'] ?>">
@@ -32,30 +28,8 @@
             </form>
         </div>
     </div>
-    <div class="row">
-        <div class="page-header">
-            <h1>Related Products</h1>
-        </div>
-        <?php foreach ( $product['related_products'] as $product ) : ?>
-            <div class="col-md-3 col-xs-6 text-center">
-                <div class="panel panel-default">
-                    <div class="panel-body">
-                        <a href="/product/<?php echo $product['slug'] ?>/">
-                            <img src="/media/products/placeholder.jpg" alt="<?php echo $product['slug'] ?>" class="img-responsive">
-                        </a>
-                    </div>
-                    <div class="panel-footer">
-                        <p>
-                            <a href="/product/<?php echo $product['slug'] ?>/">
-                                <strong><?php echo $product['name'] ?></strong>
-                            </a>
-                        </p>
-                        <p>
-                            <em>$<?php echo $product['price'] ?></em>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
+    <div class="page-header">
+        <h1>Related Products</h1>
     </div>
+    <?php $this->loadBlock('product-collection', $product['related_products']); ?>
 </div>

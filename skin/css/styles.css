@@ -1,21 +1,33 @@
-body {
-    background: #ddd;
-}
-h1 {
-    text-transform: uppercase;
-}
-textarea {
-    resize: none;
-}
+body { font-size: 16px; background: #ddd }
 
+h1 { font-size: 2em; text-transform: uppercase; }
+h2 { font-size: 1.75em; }
+h3 { font-size: 1.5em; }
+h4 { font-size: 1.25em; }
+h5 { font-size: 1em; }
+h6 { font-size: 0.75em; }
+
+p { font-size: 1em; }
+
+.n50-fs-xl { font-size: 2em; }
+.n50-fs-lg { font-size: 1.5em; }
+.n50-fs-md { font-size: 1em; }
+.n50-fs-sm { font-size: 0.75em; }
+
+textarea { resize: none; }
+input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
+
+@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}
 
 
 
 /* HELPER CLASSES */
-.n50-top-buffer-xs { margin-top: 10px; }
-.n50-top-buffer-sm { margin-top: 20px; }
-.n50-top-buffer-md { margin-tosp: 30px; }
 .n50-top-buffer-lg { margin-top: 40px; }
+.n50-top-buffer-md { margin-top: 30px; }
+.n50-top-buffer-sm { margin-top: 20px; }
+.n50-top-buffer-xs { margin-top: 10px; }
 
 .n50-header-wrapper {
     width: 100%;
@@ -31,3 +43,8 @@ textarea {
     background: #ddd;
     padding: 0 0 40px 0;
 }
+.n50-product-block-lower {
+    min-height: 70px;
+}
+
+#js-pdp-media-view:hover { cursor: pointer; }

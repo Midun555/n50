@@ -21,6 +21,12 @@
 
 # TODO
 
+- [ ] fix cart page on mobile
+- [ ] style homepage
+- [ ] style header
+- [ ] integrate shipping rate calculation via UPS
+
+- [x] add loadBlock method to controller for reusable blocks
 - [x] implement bootstrap into frontend
 - [x] integrate Stripe as payment
 - [x] create class wrappers for Stripe (ie. StripeModel.php)
@@ -33,8 +39,4 @@
 - [x] add status as condition for all product queries
 - [x] adjust htaccess and folder structure for GoDaddy subdomains
 - [x] style footer
-
-- [ ] style homepage
-- [ ] style header
-- [ ] refactor checkout models (move to shipping/payment models)
-- [ ] integrate shipping rate calculation via UPS
+- [x] refactor checkout models (move to shipping/payment models)

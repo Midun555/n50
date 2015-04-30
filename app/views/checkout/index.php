@@ -1,4 +1,4 @@
-<div class="container n50-body-wrapper" id="js-checkout-shipping-address">
+<div class="container" id="js-checkout-shipping-address">
 
     <div class="page-header">
         <h1>Shipping Address</h1>

@@ -7,43 +7,43 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3">
                 <div class="page-header">
-                    <h4><strong>Links</strong></h4>
+                    <h2 class="n50-fs-lg"><strong>Navigate</strong></h2>
                 </div>
                 <ul class="list-unstyled">
-                    <li><a href="/shop/">Shop</a></li>
+                    <li><a href="/category/all/">Shop</a></li>
                     <li><a href="/about/">About</a></li>
                     <li><a href="/contact/">Contact</a></li>
                     <li><a href="/terms/">Terms &amp; Conditions</a></li>
+                    <li><a href="/privacy/">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="col-xs-12 col-sm-5">
                 <div class="page-header">
-                    <h4><strong>n50</strong></h4>
+                    <h2 class="n50-fs-lg"><strong>n50</strong></h2>
                 </div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore sunt quos, provident ut unde at, sit eos totam, repellendus aliquid aut! Sint nulla reiciendis labore officia, voluptas libero, dolorem unde?</p>
             </div>
             <div class="col-xs-12 col-sm-4">
                 <div class="page-header">
-                    <h4><strong>Newsletter</strong></h4>
+                    <h2 class="n50-fs-lg"><strong>Newsletter</strong></h2>
                 </div>
-                <form action="/newsletter/submit/" method="post" id="js-newsletter-form">
-                    <div class="row">
-                        <div class="col-xs-8 col-sm-12">
-                            <input type="email" placeholder="Enter your email!" required class="form-control form-group" id="email">
+                <div>
+                    <form action="/newsletter/submit/" method="post" class="js-newsletter-form">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <input type="email" placeholder="Enter your email!" required class="form-control form-group" id="email">
+                            </div>
+                            <div class="col-xs-6">
+                                <button type="submit" class="btn btn-success btn-block form-group">Subscribe</button>
+                            </div>
                         </div>
-                        <div class="col-xs-4 col-sm-6">
-                            <button type="submit" class="btn btn-success btn-block form-group">Subscribe</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-    <div class="row text-center n50-top-buffer-lg">
-        <div class="col-xs-12">
-            &copy; Copyright 2015 n50.
-            Website by <a href="#" target="_blank">Neptune48</a>.
-        </div>
+    <div class="text-center n50-top-buffer-lg n50-fs-sm">
+        &copy; Copyright 2015 n50. Website by <a href="#" target="_blank">Neptune48</a>.
     </div>
 </div>
 

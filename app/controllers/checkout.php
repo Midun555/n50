@@ -22,14 +22,15 @@ class Checkout extends Controller
         {
             $shipping_address = $_POST;
 
-            $_checkout = $this->loadModel('checkout');
 
-            if ( !$_checkout->isValidShippingAddress($shipping_address) )
+            if ( !$this->loadModel('shipping')->isValidShippingAddress($shipping_address) )
             {
                 echo json_encode(array('status' => 0, 'message' => 'The address you entered could not be found.'));
             }
             else
             {
+                $_checkout = $this->loadModel('checkout');
+
                 $totals = $_checkout->getOrderTotals($shipping_address);
 
                 $_checkout->saveOrderData(array_merge($shipping_address, $totals));
@@ -47,7 +48,7 @@ class Checkout extends Controller
         if ( empty($_POST) )
             header('Location: /checkout/');
 
-        $status = $this->loadModel('stripe')->charge($_POST);
+        $status = $this->loadModel('payment')->charge($_POST);
 
         if ( $status )
         {
@@ -70,6 +71,8 @@ class Checkout extends Controller
         unset($_SESSION['visitor_id']);
         session_unset();
         session_destroy();
+
+        $_SESSION['visitor_id'] = time() + mt_rand();
 
         $this->loadView('checkout/success');
     }

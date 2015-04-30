@@ -55,7 +55,7 @@ class CheckoutModel extends Model
         $return_array['tax_rate']   = 7;
         $return_array['tax_amount'] = number_format($return_array['subtotal'] * $return_array['tax_rate']/100, 2);
 
-        $shipping = $this->calculateShipping($shipping_address);
+        $shipping = $this->loadModel('shipping')->calculateShipping($shipping_address);
         $return_array['shipping_method'] = $shipping['method'];
         $return_array['shipping_amount'] = number_format($shipping['amount'], 2);
 

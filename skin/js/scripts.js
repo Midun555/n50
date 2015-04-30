@@ -37,6 +37,11 @@
     });
 
 
+    $(document).on("click", "#js-pdp-media-view", function(e){
+        $("#js-pdp-media-main").attr("src", $(this).attr("src"));
+    });
+
+
     $(document).on("click", ".js-add-to-cart", function(e){
         $.ajax({
             url: "/cart/add_item/",

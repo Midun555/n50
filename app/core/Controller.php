@@ -23,14 +23,23 @@ abstract class Controller
 
         if ( file_exists(DOCUMENT_ROOT . '/app/views/' . $view . '.php') )
         {
-            require DOCUMENT_ROOT . '/app/views/' . $view . '.php';
+            require_once DOCUMENT_ROOT . '/app/views/' . $view . '.php';
         }
         else
         {
-            require DOCUMENT_ROOT . '/app/views/404.php';
+            require_once DOCUMENT_ROOT . '/app/views/404.php';
         }
 
         require_once DOCUMENT_ROOT . '/app/views/includes/footer.php';
+    }
+
+
+    public function loadBlock($block, $data = false)
+    {
+        $this->block_data = $data;
+
+        if ( file_exists(DOCUMENT_ROOT . '/app/views/blocks/' . $block . '.php') )
+            require_once DOCUMENT_ROOT . '/app/views/blocks/' . $block . '.php';
     }
 
 }
