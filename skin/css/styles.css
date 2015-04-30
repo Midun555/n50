@@ -1,5 +1,9 @@
 body { font-size: 16px; background: #ddd }
 
+@media screen and (max-width: 768px) {
+    body { font-size: 14px; }
+}
+
 h1 { font-size: 2em; text-transform: uppercase; }
 h2 { font-size: 1.75em; }
 h3 { font-size: 1.5em; }
@@ -9,26 +13,27 @@ h6 { font-size: 0.75em; }
 
 p { font-size: 1em; }
 
+*:focus { outline: 0; }
+textarea { resize: none; }
+input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
+
+
+/* HELPER CLASSES */
 .n50-fs-xl { font-size: 2em; }
 .n50-fs-lg { font-size: 1.5em; }
 .n50-fs-md { font-size: 1em; }
 .n50-fs-sm { font-size: 0.75em; }
 
-textarea { resize: none; }
-input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
+.n50-fw-bold    { font-weight: bolder; }
+.n50-fw-normal  { font-weight: normal; }
+.n50-fw-light   { font-weight: lighter; }
 
-@media screen and (max-width: 768px) {
-    body { font-size: 14px; }
-}
-
-
-
-/* HELPER CLASSES */
 .n50-top-buffer-lg { margin-top: 40px; }
 .n50-top-buffer-md { margin-top: 30px; }
 .n50-top-buffer-sm { margin-top: 20px; }
 .n50-top-buffer-xs { margin-top: 10px; }
 
+/* CUSTOM SECTIONS */
 .n50-header-wrapper {
     width: 100%;
     background: #fff;
@@ -47,4 +52,5 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
     min-height: 70px;
 }
 
+/* MISC. */
 #js-pdp-media-view:hover { cursor: pointer; }

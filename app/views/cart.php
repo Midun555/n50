@@ -19,10 +19,12 @@
 
             <?php foreach ( $this->data['items'] as $product ) : ?>
                 <div class="row n50-top-buffer-md">
-                    <div class="col-sm-2 col-xs-6">
-                        <img src="/media/products/placeholder.jpg" class="img-responsive"/>
+                    <div class="col-sm-2 hidden-xs">
+                        <a href="/product/<?php echo $product['slug'] ?>/">
+                            <img src="/media/products/placeholder.jpg" class="img-responsive"/>
+                        </a>
                     </div>
-                    <div class="col-sm-5 col-xs-6">
+                    <div class="col-sm-5 col-xs-12">
                         <a href="/product/<?php echo $product['slug'] ?>/">
                             <h4><?php echo $product['name'] ?></h4>
                         </a>
@@ -55,11 +57,11 @@
             </div>
 
             <div class="row n50-top-buffer-md">
-                <div class="col-xs-2 hidden-xs">
+                <div class="col-xs-3 hidden-xs">
                     <input type="submit" value="Update Cart" class="btn btn-info btn-block">
                 </div>
-                <div class="col-xs-8 hidden-xs">&nbsp;</div>
-                <div class="col-sm-2 col-xs-12">
+                <div class="col-xs-6 hidden-xs">&nbsp;</div>
+                <div class="col-sm-3 col-xs-12">
                     <a href="/checkout/" class="btn btn-success btn-block">Checkout</a>
                 </div>
             </div>

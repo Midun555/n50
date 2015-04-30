@@ -1,7 +1,7 @@
 <div class="container">
 
     <div class="page-header">
-        <h1>Terms &amp; Conditions</h1>
+        <h1>Privacy Policy</h1>
     </div>
 
     <div>

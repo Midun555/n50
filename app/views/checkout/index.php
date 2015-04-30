@@ -122,7 +122,7 @@
                     data-color="black"
                     data-name="n50"
                     data-description="<?php echo $this->cart_count ?> items"
-                    data-image="/skin/images/logo.png">
+                    data-image="/skin/images/logo-circle.png">
                 </script>
             </form>
         </div>

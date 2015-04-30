@@ -13,7 +13,12 @@
 
 <div class="n50-header-wrapper">
     <div class="container">
-        <nav class="navbar navbar-default">
+        <div class="logo text-center">
+            <a href="/">
+                <img src="/skin/images/logo-diamond.png" alt="n50" width="200">
+            </a>
+        </div>
+        <nav class="navbar navbar-default n50-top-buffer-md">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
