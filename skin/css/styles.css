@@ -39,6 +39,18 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
     background: #fff;
     padding: 40px 0 0 0;
 }
+.n50-header-wrapper .navbar-default {
+    background: none;
+    border-radius: 0;
+    border: none;
+    border-top: solid 1px #eee;
+    border-bottom: solid 1px #eee;
+}
+.n50-header-wrapper .nav>li>a {
+    padding: 15px 30px 15px 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
 .n50-body-wrapper {
     background: #fff;
     padding: 0 0 60px 0;

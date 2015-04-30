@@ -19,39 +19,40 @@
             </a>
         </div>
         <nav class="navbar navbar-default n50-top-buffer-md">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/">n50</a>
-                </div>
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav">
-                        <?php foreach ( $this->category_links as $category ) :  ?>
-                            <li>
-                                <a href="/category/<?php echo $category['slug'] ?>/">
-                                    <?php echo $category['name'] ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- <a class="navbar-brand" href="/">n50</a> -->
+                <!-- <a href="/cart/">
+                    <span class="glyphicon glyphicon-shopping-cart"></span>
+                </a> -->
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <?php foreach ( $this->category_links as $category ) :  ?>
                         <li>
-                            <a href="/cart/">
-                                <span class="glyphicon glyphicon-shopping-cart"></span>
-                                <span id="js-cart-count">(<?php echo $this->cart_count ?>)</span>
+                            <a href="/category/<?php echo $category['slug'] ?>/">
+                                <?php echo $category['name'] ?>
                             </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <?php endforeach; ?>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/cart/">
+                            <span class="glyphicon glyphicon-shopping-cart"></span>
+                            <span id="js-cart-count">(<?php echo $this->cart_count ?>)</span>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
+                    </li> -->
+                </ul>
             </div>
         </nav>
     </div>
