@@ -1,5 +1,40 @@
 (function($){
 
+    /*
+     * Form validations.
+     *
+     * For every form being submitted, find all required fields and make sure
+     * they have content.  This is a fallback for browsers that don't support
+     * the html5 'required' tag attribute, such as iOS, Safari, and Android.
+     */
+    $(document).on("submit", "form", function(e){
+
+        var prevent_default = false;
+
+        $(this).find("input:required, textarea:required, select:required").each(function(index) {
+
+            if ( $.trim(this.value) == "" ) {
+                $(this).addClass("n50-input-error").focus();
+                alert("Please complete all required fields.");
+                prevent_default = true;
+            }
+
+        });
+
+        return !prevent_default;
+
+    });
+
+
+    /**
+     * /checkout/
+     *
+     * When the shipping address form is submitted on the checkout index page,
+     * send the form data to /checkout/shipping_save/ for the address to be
+     * validated, and for the shipping rates to be calculated. Upon success,
+     * update the payment block with new totals and Stripe information, then
+     * show the block.
+     */
     $("#js-shipping-address").on("submit", function(e){
         e.preventDefault();
 
@@ -37,6 +72,11 @@
     });
 
 
+    /*
+     * /product/{product_slug}/
+     *
+     * On click of the multiple view thumnails, change the main view image.
+     */
     $(document).on("click", "#js-pdp-media-view", function(e){
         $("#js-pdp-media-main").attr("src", $(this).attr("src"));
     });
@@ -58,40 +98,6 @@
                 $(".js-message").html("Added to cart. <a href='/cart/'>View cart.</a>");
             }
         });
-    });
-
-
-    // CONTACT FORM SUBMISSION
-    $(document).on("submit", ".js-contact-form", function(e){
-        e.preventDefault();
-        var preventDefault = false;
-        var values = [];
-        $(this).find(".required").each(function(index) {
-            if ( $.trim(this.value) == "" ) {
-                preventDefault = true;
-            } else {
-                values[index] = this.value;
-            }
-        });
-        if ( preventDefault ) {
-            $(".js-submit-message")
-                .hide()
-                .html("Please fill in all required fields.")
-                .fadeIn(400);
-        } else {
-            $.ajax({
-                data: { values: values },
-                cache: false,
-                url: "/contact/submit/",
-                type: "POST",
-                success: function() {
-                    $(".js-submit-message")
-                        .hide()
-                        .html("Thank you for sharing!")
-                        .fadeIn(400);
-                }
-            });
-        }
     });
 
 })(jQuery);

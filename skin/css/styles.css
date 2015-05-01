@@ -5,6 +5,7 @@ body { font-size: 16px; background: #ddd }
 }
 
 h1 { font-size: 2em; text-transform: uppercase; }
+h1 small { text-transform: none; }
 h2 { font-size: 1.75em; }
 h3 { font-size: 1.5em; }
 h4 { font-size: 1.25em; }
@@ -14,9 +15,9 @@ h6 { font-size: 0.75em; }
 p { font-size: 1em; }
 
 *:focus { outline: 0; }
+textarea, input { outline: none; }
 textarea { resize: none; }
 input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
-
 
 /* HELPER CLASSES */
 .n50-fs-xl { font-size: 2em; }
@@ -37,6 +38,8 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
 .n50-bottom-buffer-md { margin-bottom: 30px; }
 .n50-bottom-buffer-sm { margin-bottom: 20px; }
 .n50-bottom-buffer-xs { margin-bottom: 10px; }
+
+.n50-input-error { border-color: red; }
 
 /* CUSTOM SECTIONS */
 .n50-header-wrapper {

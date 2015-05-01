@@ -10,7 +10,7 @@
     <?php $this->loadBlock('product-collection', $this->featured_products); ?>
 
     <div class="page-header">
-        <h1>Instagram</h1>
+        <h1>Instagram<small> @n50</small></h1>
     </div>
     <div class="row">
         <?php for ( $i = 0; $i < 12; $i++ ) : ?>

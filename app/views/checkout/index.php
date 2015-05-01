@@ -95,20 +95,20 @@
     </div>
 
     <div class="row">
-        <div class="col-md-3 col-xs-6"><strong>Subtotal</strong></div>
-        <div class="col-md-1 col-xs-6 text-right">$<span id="js-subtotal"></span></div>
+        <div class="col-md-3 col-xs-8"><strong>Subtotal</strong></div>
+        <div class="col-md-1 col-xs-4 text-right">$<span id="js-subtotal"></span></div>
     </div>
     <div class="row">
-        <div class="col-md-3 col-xs-6"><strong>Tax (@ <span id="js-tax-rate">7</span>%)</strong></div>
-        <div class="col-md-1 col-xs-6 text-right">$<span id="js-tax-amount"></span></div>
+        <div class="col-md-3 col-xs-8"><strong>Tax (@ <span id="js-tax-rate">7</span>%)</strong></div>
+        <div class="col-md-1 col-xs-4 text-right">$<span id="js-tax-amount"></span></div>
     </div>
     <div class="row">
-        <div class="col-md-3 col-xs-6"><strong>Shipping (<span id="js-shipping-method">UPS Ground</span>)</strong></div>
-        <div class="col-md-1 col-xs-6 text-right">$<span id="js-shipping-amount"></span></div>
+        <div class="col-md-3 col-xs-8"><strong>Shipping (<span id="js-shipping-method">UPS Ground</span>)</strong></div>
+        <div class="col-md-1 col-xs-4 text-right">$<span id="js-shipping-amount"></span></div>
     </div>
     <div class="row">
-        <div class="col-md-3 col-xs-6"><h4><strong>Grand Total</strong></h4></div>
-        <div class="col-md-1 col-xs-6 text-right"><h4>$<span id="js-grand-total"></span></h4></div>
+        <div class="col-md-3 col-xs-8"><h4><strong>Grand Total</strong></h4></div>
+        <div class="col-md-1 col-xs-4 text-right"><h4>$<span id="js-grand-total"></span></h4></div>
     </div>
     <div class="row">
         <div class="col-md-3 col-xs-12">

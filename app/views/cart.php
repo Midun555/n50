@@ -33,7 +33,7 @@
                         <em>$<?php echo $product['price'] ?></em>
                     </div>
                     <div class="col-sm-2 col-xs-4 text-center">
-                        <input type="number" name="quantity[<?php echo $product['id'] ?>]" value="<?php echo $product['quantity'] ?>" min="0">
+                        <input type="number" name="quantity[<?php echo $product['id'] ?>]" value="<?php echo $product['quantity'] ?>" min="0" required>
                     </div>
                     <div class="col-sm-1 col-xs-3 text-center">
                         <em>$<?php echo $product['subtotal'] ?></em>
