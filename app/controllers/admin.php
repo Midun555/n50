@@ -101,4 +101,15 @@ class Admin extends Controller
         $this->loadModel('exporter')->processExport();
     }
 
+
+    public function order($order_id)
+    {
+        if ( !$this->loadModel('admin')->isAdminLoggedIn() )
+            header('Location: /admin/login/');
+
+        $this->order = $this->loadModel('admin')->getOrderData($order_id);
+
+        $this->loadView('admin/order');
+    }
+
 }

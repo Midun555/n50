@@ -7,6 +7,9 @@
             <a href="/admin/export/">Export</a>
         </li>
         <li>
+            <a href="/admin/orders/">Orders</a>
+        </li>
+        <li>
             <a href="/admin/logout/">Logout</a>
         </li>
     </ul>
