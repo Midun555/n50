@@ -54,14 +54,24 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
     border-top: solid 1px #eee;
     border-bottom: solid 1px #eee;
 }
-.n50-header-wrapper .nav>li>a {
+.n50-header-wrapper .navbar-default .nav>li>a {
     padding: 15px 30px 15px 0;
     text-transform: uppercase;
     font-weight: bolder;
 }
+.n50-header-wrapper .navbar-default .navbar-toggle {
+    float: left;
+}
+.n50-header-wrapper .navbar-default .n50-mobile-cart-icon {
+    padding: 15px 15px 15px 0;
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: #777;
+}
 .n50-body-wrapper {
     background: #fff;
     padding: 0 0 60px 0;
+    min-height: 500px;
 }
 .n50-footer-wrapper {
     width: 100%;

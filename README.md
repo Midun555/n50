@@ -4,6 +4,9 @@
 - [ ] integrate shipping rate calculation via UPS
 - [ ] build admin panel to view orders/items/totals/etc.
 
+***
+
+- [x] add cart icon to header nav on mobile
 - [x] add Stripe and UPS logos to footer
 - [x] ajax newsletter signup in footer
 - [x] set up password protected admin panel

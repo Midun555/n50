@@ -25,10 +25,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!-- <a class="navbar-brand" href="/">n50</a> -->
-                <!-- <a href="/cart/">
+                <a href="/cart/" class="visible-xs-block pull-right n50-mobile-cart-icon">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
-                </a> -->
+                    <span id="js-cart-count">(<?php echo $this->cart_count ?>)</span>
+                </a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
@@ -40,7 +40,7 @@
                         </li>
                     <?php endforeach; ?>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right hidden-xs">
                     <li>
                         <a href="/cart/">
                             <span class="glyphicon glyphicon-shopping-cart"></span>
