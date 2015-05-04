@@ -41,9 +41,14 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="text-center n50-top-buffer-lg n50-fs-sm">
-        &copy; Copyright 2015 n50. Website by <a href="#" target="_blank">Neptune48</a>.
+        <div class="text-center n50-top-buffer-lg">
+            <a href="https://stripe.com/" target="_blank">
+                <img src="/skin/images/stripe-logo.png" alt="Powered By Stripe">
+            </a>
+        </div>
+        <div class="text-center n50-top-buffer-lg n50-fs-sm">
+            &copy; Copyright 2015 n50. Website by <a href="#" target="_blank">Neptune48</a>.
+        </div>
     </div>
 </div>
 

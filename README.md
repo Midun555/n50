@@ -2,10 +2,10 @@
 
 - [ ] run through Stripe error handling (https://stripe.com/docs/testing#cards)
 - [ ] integrate shipping rate calculation via UPS
-- [ ] ajax newsletter signup in footer
 - [ ] build admin panel to view orders/items/totals/etc.
-- [ ] add Stripe and UPS logos to footer
 
+- [x] add Stripe and UPS logos to footer
+- [x] ajax newsletter signup in footer
 - [x] set up password protected admin panel
 - [x] form validation through javascript
 - [x] style homepage

@@ -101,6 +101,13 @@
     });
 
 
+    /**
+     * Footer newsletter signup form.
+     *
+     * When the newsletter form in the footer is submitted, send the input email
+     * to a file via AJAX. If the email is already signed up, return error and
+     * alert message, otherwise, show success message in input field.
+     */
     $("#js-newsletter-form").on("submit", function(e){
         e.preventDefault();
         var $this = $(this);
@@ -118,7 +125,7 @@
                     alert(json["message"]);
                     $this.find("input").focus().parent().addClass("has-warning");
                 } else {
-                    $this.find("input").val(json["message"]);
+                    $this.find("input").val(json["message"]).parent().addClass("has-success");
                 }
             }
         });
