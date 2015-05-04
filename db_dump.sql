@@ -1,13 +1,13 @@
 # ************************************************************
 # Sequel Pro SQL dump
-# Version 4135
+# Version 4096
 #
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
-# Host: localhost (MySQL 5.5.38)
+# Host: localhost (MySQL 5.5.25)
 # Database: n50
-# Generation Time: 2015-04-29 21:06:56 +0000
+# Generation Time: 2015-05-04 05:40:59 +0000
 # ************************************************************
 
 
@@ -84,7 +84,7 @@ VALUES
   (4,'Wooden Crate','wooden-crate','m-crate-01','89','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet',5,'Michael',0,1,'2015-04-28 14:58:25','2015-04-28 14:58:25'),
   (5,'Planter Box','planter-box','m-planter-01','124','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet',9,'Michael',0,1,'2015-04-28 14:58:25','2015-04-28 14:58:25'),
   (6,'Burlap Letter Sign','burlap-letter-sign','m-sign-01','17','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet;burlap',1,'Michael',1,1,'2015-04-28 14:58:25','2015-04-28 14:58:25'),
-  (7,'Rope Picture Frame','rope-picture-frame','m-frame-01','63','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet',4,'Michael',1,1,'2015-04-28 14:58:25','2015-04-28 14:58:25'),
+  (7,'Rope Picture Frame','rope-picture-frame','m-frame-01','63','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood',4,'Michael',1,1,'2015-04-28 14:58:25','2015-04-29 22:45:59'),
   (8,'Ring Life Preserver Sign','ring-life-preserver-sign','m-sign-02','98','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet;signs',5,'Michael',0,1,'2015-04-28 14:58:25','2015-04-28 14:58:25'),
   (9,'Sandy Salty Happy Sign','sandy-salty-happy-sign','m-sign-03','76','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet;signs',5,'Michael',0,1,'2015-04-28 14:58:25','2015-04-28 14:58:25'),
   (10,'Beach Direction Sign','beach-direction-sign','m-sign-04','54','Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt itaque, distinctio nobis vel sapiente obcaecati, voluptas perferendis molestias alias nulla maxime eum neque voluptatum. At, quas incidunt optio modi. Velit.','wood;pallet;signs',4,'Michael',1,1,'2015-04-28 14:58:25','2015-04-28 14:58:25');
@@ -105,7 +105,7 @@ CREATE TABLE `sales_cart` (
   `quantity` int(11) DEFAULT NULL,
   `timestamp_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sales_cart` WRITE;
 /*!40000 ALTER TABLE `sales_cart` DISABLE KEYS */;
@@ -117,7 +117,10 @@ VALUES
   (3,'3045842618',3,7,'2015-04-24 16:35:39'),
   (4,'1571673046',3,7,'2015-04-24 16:36:23'),
   (5,'2229306586',3,1,'2015-04-28 13:56:01'),
-  (6,'2229306586',4,3,'2015-04-28 17:00:30');
+  (6,'2229306586',4,3,'2015-04-28 17:00:30'),
+  (7,'1469346976',1,5,'2015-05-03 17:23:56'),
+  (8,'1469346976',8,4,'2015-04-29 22:47:09'),
+  (13,'1839433233',2,2,'2015-04-30 23:08:46');
 
 /*!40000 ALTER TABLE `sales_cart` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -150,15 +153,15 @@ CREATE TABLE `sales_orders` (
   `timestamp_created` timestamp NULL DEFAULT NULL,
   `timestamp_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 LOCK TABLES `sales_orders` WRITE;
 /*!40000 ALTER TABLE `sales_orders` DISABLE KEYS */;
 
 INSERT INTO `sales_orders` (`id`, `visitor_id`, `first_name`, `last_name`, `email`, `phone`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`, `subtotal`, `tax_rate`, `tax_amount`, `shipping_amount`, `shipping_method`, `grand_total`, `timestamp_created`, `timestamp_updated`)
 VALUES
-  (5,'1571673046','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States',161,7,11,15,'UPS Ground',187,'2015-04-24 17:17:36','2015-04-24 17:17:36'),
-  (8,'2229306586','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States',23,7,2,15,'UPS Ground',39,'2015-04-28 14:52:45','2015-04-28 14:52:45');
+  (4,'1469346976','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States',504,7,35,15,'UPS Ground',554,'2015-04-30 22:50:03','2015-04-30 22:50:03'),
+  (10,'1839433233','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States',114,7,8,15,'UPS Ground',137,'2015-04-30 23:11:55','2015-04-30 23:11:55');
 
 /*!40000 ALTER TABLE `sales_orders` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -181,7 +184,32 @@ CREATE TABLE `sales_payments` (
   `timestamp_created` timestamp NULL DEFAULT NULL,
   `timestamp_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+LOCK TABLES `sales_payments` WRITE;
+/*!40000 ALTER TABLE `sales_payments` DISABLE KEYS */;
+
+INSERT INTO `sales_payments` (`id`, `visitor_id`, `stripe_token`, `stripe_token_type`, `stripe_email`, `grand_total`, `charge_id`, `charge_status`, `timestamp_created`, `timestamp_updated`)
+VALUES
+  (1,'1839433233','tok_15xXO4DfIHng7w804k8a7xfH','card','miguelpelota1@yahoo.com',137,'ch_15xXO7DfIHng7w80Y9FowUPA','succeeded','2015-04-30 23:12:39','2015-04-30 23:12:39');
+
+/*!40000 ALTER TABLE `sales_payments` ENABLE KEYS */;
+UNLOCK TABLES;
+
+
+# Dump of table users_newsletter
+# ------------------------------------------------------------
+
+DROP TABLE IF EXISTS `users_newsletter`;
+
+CREATE TABLE `users_newsletter` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `visitor_id` varchar(25) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `timestamp_created` timestamp NULL DEFAULT NULL,
+  `timestamp_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 
 

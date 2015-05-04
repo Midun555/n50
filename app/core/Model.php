@@ -8,6 +8,7 @@ abstract class Model
     const CART       = 'sales_cart';
     const ORDERS     = 'sales_orders';
     const PAYMENTS   = 'sales_payments';
+    const NEWLSETTER = 'users_newsletter';
 
 
     public function __construct()

@@ -100,4 +100,32 @@
         });
     });
 
+
+    $("#js-newsletter-form").on("submit", function(e){
+        e.preventDefault();
+        var $this = $(this);
+        $.ajax({
+            url: "/newsletter/signup/",
+            data: {
+                email: $this.find("input").val(),
+            },
+            dataType: "json",
+            type: "POST",
+            cache: false,
+            success: function(json) {
+
+                if ( json["error"] == 1 ) {
+                    alert(json["message"]);
+                    $this.find("input").focus().parent().addClass("has-warning");
+                } else {
+                    $this.find("input").val(json["message"]);
+                }
+            }
+        });
+    });
+
+
+
+
+
 })(jQuery);

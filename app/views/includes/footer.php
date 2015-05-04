@@ -28,10 +28,10 @@
                     <h2 class="n50-fs-lg"><strong>Newsletter</strong></h2>
                 </div>
                 <div>
-                    <form action="/newsletter/submit/" method="post" class="js-newsletter-form">
+                    <form action="/newsletter/signup/" method="post" id="js-newsletter-form">
                         <div class="row">
                             <div class="col-xs-12">
-                                <input type="email" placeholder="Enter your email!" required class="form-control form-group" id="email">
+                                <input type="email" placeholder="Enter your email!" required class="form-control form-group">
                             </div>
                             <div class="col-xs-6">
                                 <button type="submit" class="btn btn-success btn-block form-group">Subscribe</button>

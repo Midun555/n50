@@ -1,24 +1,3 @@
-# PAGES
-
-- /
-- /about/
-- /contact/
-- /shipping_handling/
-- /cart/
-- /search/{query}/
-- /category/{category_slug}/
-- /product/{product_slug}/
-
-- /checkout/
-- /checkout/shipping_address_save/
-- /checkout/stripe_charge/
-- /checkout/success/
-- /checkout/error/
-
-- /admin/upload/
-- /admin/export/
-
-
 # TODO
 
 - [ ] run through Stripe error handling (https://stripe.com/docs/testing#cards)
