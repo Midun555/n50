@@ -2,10 +2,10 @@
 
 - [ ] run through Stripe error handling (https://stripe.com/docs/testing#cards)
 - [ ] integrate shipping rate calculation via UPS
-- [ ] build admin panel to view orders/items/totals/etc.
 
 ***
 
+- [x] build admin panel to view orders/items/totals/etc.
 - [x] add cart icon to header nav on mobile
 - [x] add Stripe and UPS logos to footer
 - [x] ajax newsletter signup in footer

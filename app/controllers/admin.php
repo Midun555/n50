@@ -102,6 +102,17 @@ class Admin extends Controller
     }
 
 
+    public function orders()
+    {
+        if ( !$this->loadModel('admin')->isAdminLoggedIn() )
+            header('Location: /admin/login/');
+
+        $this->orders = $this->loadModel('admin')->getOrderCollection();
+
+        $this->loadView('admin/orders');
+    }
+
+
     public function order($order_id)
     {
         if ( !$this->loadModel('admin')->isAdminLoggedIn() )

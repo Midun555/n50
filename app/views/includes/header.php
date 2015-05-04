@@ -11,6 +11,14 @@
 </head>
 <body>
 
+<?php if ( $this->loadModel('admin')->isAdminLoggedIn() ) : ?>
+    <div class="n50-admin-bar-wrapper">
+        <div class="container">
+            <a href="/admin/" class="btn btn-primary">Admin</a>
+        </div>
+    </div>
+<?php endif; ?>
+
 <div class="n50-header-wrapper">
     <div class="container">
         <div class="logo text-center">

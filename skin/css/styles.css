@@ -42,6 +42,11 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
 .n50-input-error { border-color: red; }
 
 /* CUSTOM SECTIONS */
+.n50-admin-bar-wrapper {
+    width: 100%;
+    background: #eee;
+    padding: 10px 0;
+}
 .n50-header-wrapper {
     width: 100%;
     background: #fff;
@@ -81,6 +86,10 @@ input[type="number"] { width: 50px; text-align: center; padding: 0 0 0 15px; }
 .n50-product-block-lower {
     min-height: 70px;
 }
+.n50-admin-order-data .panel-body {
+    min-height: 128px;
+}
+
 
 /* MISC. */
 #js-pdp-media-view:hover { cursor: pointer; }
