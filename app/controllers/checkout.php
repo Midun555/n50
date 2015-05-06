@@ -69,8 +69,8 @@ class Checkout extends Controller
             header('Location: /');
 
         unset($_SESSION['visitor_id']);
-        session_unset();
-        session_destroy();
+        // session_unset();
+        // session_destroy();
 
         $_SESSION['visitor_id'] = time() + mt_rand();
 
