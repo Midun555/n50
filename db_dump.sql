@@ -1,13 +1,13 @@
 # ************************************************************
 # Sequel Pro SQL dump
-# Version 4096
+# Version 4135
 #
 # http://www.sequelpro.com/
 # http://code.google.com/p/sequel-pro/
 #
-# Host: localhost (MySQL 5.5.25)
+# Host: localhost (MySQL 5.5.38)
 # Database: n50
-# Generation Time: 2015-05-06 05:47:51 +0000
+# Generation Time: 2015-05-07 00:56:18 +0000
 # ************************************************************
 
 
@@ -121,7 +121,14 @@ VALUES
   (7,'1469346976',1,6,'2015-05-05 22:45:24'),
   (8,'1469346976',8,4,'2015-04-29 22:47:09'),
   (14,'1469346976',5,5,'2015-05-05 22:45:31'),
-  (13,'1839433233',2,2,'2015-04-30 23:08:46');
+  (13,'1839433233',2,2,'2015-04-30 23:08:46'),
+  (15,'2829218243',10,1,'2015-05-06 16:32:38'),
+  (16,'2407421816',3,1,'2015-05-06 16:33:28'),
+  (17,'3443819065',8,16,'2015-05-06 16:43:59'),
+  (18,'2054441972',4,1,'2015-05-06 16:48:58'),
+  (19,'2054441972',1,1,'2015-05-06 16:56:55'),
+  (20,'3462583336',2,1,'2015-05-06 17:23:08'),
+  (21,'3334284843',3,102,'2015-05-06 17:24:45');
 
 /*!40000 ALTER TABLE `sales_cart` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -161,8 +168,14 @@ LOCK TABLES `sales_orders` WRITE;
 
 INSERT INTO `sales_orders` (`id`, `visitor_id`, `first_name`, `last_name`, `email`, `phone`, `address_1`, `address_2`, `city`, `state`, `zip`, `country`, `subtotal`, `tax_rate`, `tax_amount`, `shipping_amount`, `shipping_method`, `grand_total`, `timestamp_created`, `timestamp_updated`)
 VALUES
-  (11,'1469346976','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States',1,7,0,15,'UPS Ground',16,'2015-05-05 22:45:38','2015-05-05 22:45:38'),
-  (10,'1839433233','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States',114,7,8,15,'UPS Ground',137,'2015-04-30 23:11:55','2015-04-30 23:11:55');
+  (11,'1469346976','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','1','7','0','15','UPS Ground','16','2015-05-05 22:45:38','2015-05-05 22:45:38'),
+  (10,'1839433233','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','114','7','8','15','UPS Ground','137','2015-04-30 23:11:55','2015-04-30 23:11:55'),
+  (12,'2829218243','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','54.00','7','3.78','14.73','UPS Ground','72.51','2015-05-06 16:32:44','2015-05-06 16:32:44'),
+  (13,'2407421816','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','23.00','7','1.61','14.73','UPS Ground','39.34','2015-05-06 16:33:32','2015-05-06 16:33:32'),
+  (15,'3443819065','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','1568.00','7','109.76','14.73','UPS Ground','1692.49','2015-05-06 16:47:43','2015-05-06 16:47:43'),
+  (19,'2054441972','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','138.00','7','9.66','14.73','UPS Ground','162.39','2015-05-06 17:05:35','2015-05-06 17:05:35'),
+  (23,'3462583336','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','57.00','7','3.99','14.73','UPS Ground','75.72','2015-05-06 17:23:45','2015-05-06 17:23:45'),
+  (24,'3334284843','Miguel','Pelota','miguelpelota1@yahoo.com','1112223333','11235 Knott Ave. Suite B','','Cypress','CA','90630','United States','2346.00','7','164.22','14.73','UPS Ground','2524.95','2015-05-06 17:24:50','2015-05-06 17:24:50');
 
 /*!40000 ALTER TABLE `sales_orders` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -193,7 +206,13 @@ LOCK TABLES `sales_payments` WRITE;
 INSERT INTO `sales_payments` (`id`, `visitor_id`, `stripe_token`, `stripe_token_type`, `stripe_email`, `grand_total`, `charge_id`, `charge_status`, `timestamp_created`, `timestamp_updated`)
 VALUES
   (1,'1839433233','tok_15xXO4DfIHng7w804k8a7xfH','card','miguelpelota1@yahoo.com',137,'ch_15xXO7DfIHng7w80Y9FowUPA','succeeded','2015-04-30 23:12:39','2015-04-30 23:12:39'),
-  (2,'1469346976','tok_15zLLlDfIHng7w80IsMxCaar','card','miguelpelota1@yahoo.com',16,'ch_15zLLoDfIHng7w80CVOCep1K','succeeded','2015-05-05 22:45:46','2015-05-05 22:45:46');
+  (2,'1469346976','tok_15zLLlDfIHng7w80IsMxCaar','card','miguelpelota1@yahoo.com',16,'ch_15zLLoDfIHng7w80CVOCep1K','succeeded','2015-05-05 22:45:46','2015-05-05 22:45:46'),
+  (3,'2829218243','tok_15zc0cDfIHng7w80kE4BFTvR','card','miguelpelota1@yahoo.com',73,'ch_15zc0qDfIHng7w802BBklZ24','succeeded','2015-05-06 16:33:13','2015-05-06 16:33:13'),
+  (4,'2407421816','tok_15zc8ZDfIHng7w80s9J2gHSV','card','miguelpelota1@yahoo.com',39,'ch_15zc8cDfIHng7w800nQnoDLZ','succeeded','2015-05-06 16:41:17','2015-05-06 16:41:17'),
+  (5,'3443819065','tok_15zcExDfIHng7w80ZCazTsRU','card','miguelpelota1@yahoo.com',1692,'ch_15zcF0DfIHng7w807PmGyDUA','succeeded','2015-05-06 16:47:50','2015-05-06 16:47:50'),
+  (6,'2054441972','tok_15zcWJDfIHng7w80hBaKrNXT','card','miguelpelota1@yahoo.com',162,'ch_15zcWMDfIHng7w80ERZh8tmG','succeeded','2015-05-06 17:05:47','2015-05-06 17:05:47'),
+  (7,'3462583336','tok_15zco8DfIHng7w80uF00FrvH','card','miguelpelota1@yahoo.com',76,'ch_15zcoBDfIHng7w80AwVPrUNd','succeeded','2015-05-06 17:24:11','2015-05-06 17:24:11'),
+  (8,'3334284843','tok_15zcp2DfIHng7w80rAjZKJAA','card','miguelpelota1@yahoo.com',2525,'ch_15zcp7DfIHng7w80hBpR57Ga','succeeded','2015-05-06 17:25:09','2015-05-06 17:25:09');
 
 /*!40000 ALTER TABLE `sales_payments` ENABLE KEYS */;
 UNLOCK TABLES;
