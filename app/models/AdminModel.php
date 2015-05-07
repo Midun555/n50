@@ -32,7 +32,7 @@ class AdminModel extends Model
                 'id'          => $order['visitor_id'],
                 'date'        => date('F j, Y, g:i a', strtotime($order['timestamp_created'])),
                 'name'        => $order['first_name'] . ' ' . $order['last_name'],
-                'grand_total' => number_format($order['grand_total'], 2),
+                'grand_total' => number_format($order['grand_total'], 2, '.', ''),
                 'location'    => $order['city'] . ', ' . $order['state']
             );
         }
@@ -60,7 +60,7 @@ class AdminModel extends Model
 
         foreach ( $items as $key => $item )
         {
-            $items[$key]['price'] = number_format($item['price'], 2);
+            $items[$key]['price'] = number_format($item['price'], 2, '.', '');
         }
 
         $order[0]['items'] = $items;

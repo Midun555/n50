@@ -50,16 +50,16 @@ class CheckoutModel extends Model
     {
         $return_array = array();
 
-        $return_array['subtotal']   = number_format($this->getOrderSubtotal(), 2);
+        $return_array['subtotal']   = number_format($this->getOrderSubtotal(), 2, '.', '');
 
         $return_array['tax_rate']   = 7;
-        $return_array['tax_amount'] = number_format($return_array['subtotal'] * $return_array['tax_rate']/100, 2);
+        $return_array['tax_amount'] = number_format($return_array['subtotal'] * $return_array['tax_rate']/100, 2, '.', '');
 
         $shipping = $this->loadModel('shipping')->calculateShipping($shipping_address);
         $return_array['shipping_method'] = $shipping['method'];
-        $return_array['shipping_amount'] = number_format($shipping['amount'], 2);
+        $return_array['shipping_amount'] = number_format($shipping['amount'], 2, '.', '');
 
-        $return_array['grand_total'] = number_format($return_array['subtotal'] + $return_array['tax_amount'] + $return_array['shipping_amount'], 2);
+        $return_array['grand_total'] = number_format($return_array['subtotal'] + $return_array['tax_amount'] + $return_array['shipping_amount'], 2, '.', '');
 
         return $return_array;
     }

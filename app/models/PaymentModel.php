@@ -46,7 +46,7 @@ class PaymentModel extends model
 
             $this->savePaymentData($payment_data);
 
-            return ( $charge->status == 'succeeded' ) ? true : false;
+            return ( $charge->status == 'succeeded' ) ? array('status' => true) : array('status' => false, 'message' => 'An error occured during payment.');
 
         } catch ( Exception $e ) {
 
@@ -55,6 +55,7 @@ class PaymentModel extends model
 
             echo '<pre>'; print_r($error); echo '</pre><hr>'; die();
 
+            return array('status' => false, 'message' => $error['message']);
         }
     }
 

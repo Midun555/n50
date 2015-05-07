@@ -58,14 +58,18 @@
                 if ( json.status == 0 ) {
                     alert(json.message);
                 } else {
-                    jQuery("#js-subtotal").text(json.subtotal);
-                    jQuery("#js-tax-rate").text(json.tax_rate);
-                    jQuery("#js-tax-amount").text(json.tax_amount);
-                    jQuery("#js-shipping-method").text(json.shipping_method);
-                    jQuery("#js-shipping-amount").text(json.shipping_amount);
-                    jQuery("#js-grand-total").text(json.grand_total);
-                    jQuery("#js-stripe").attr("data-amount", json.grand_total * 100);
-                    jQuery("#js-checkout-totals").removeClass("hide").addClass("show");
+                    $("#js-subtotal").text(json.subtotal);
+                    $("#js-tax-rate").text(json.tax_rate);
+                    $("#js-tax-amount").text(json.tax_amount);
+                    $("#js-shipping-method").text(json.shipping_method);
+                    $("#js-shipping-amount").text(json.shipping_amount);
+                    $("#js-grand-total").text(json.grand_total);
+                    $("#js-stripe").attr("data-amount", json.grand_total * 100);
+                    $("#js-checkout-totals").removeClass("hide").addClass("show");
+
+                    $('html, body').animate({
+                        scrollTop: $("#js-checkout-totals").offset().top
+                    }, 800);
                 }
             }
         });

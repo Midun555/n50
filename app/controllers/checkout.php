@@ -50,7 +50,7 @@ class Checkout extends Controller
 
         $status = $this->loadModel('payment')->charge($_POST);
 
-        if ( $status )
+        if ( $status['status'] )
         {
             header('Location: /checkout/success/');
         }
