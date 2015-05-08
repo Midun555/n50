@@ -9,10 +9,10 @@ class About extends Controller
             'to'      => 'michael.b@530medialab.com',
             'from'    => EMAIL_CUSTOMER_SERVICE,
             'subject' => 'testing subject',
-            'body'    => $this->loadModel('email')->generateOrderHtml('3334284843')
+            'body'    => $this->loadModel('email')->generateOrderHtml('2054441972')
         );
 
-        die('2 -- THOU SHALL NOT PASS --');
+        // die('3 -- THOU SHALL NOT PASS --');
         $this->loadModel('email')->send($email);
 
         // $this->loadView('about');

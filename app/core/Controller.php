@@ -43,4 +43,14 @@ abstract class Controller
             require_once DOCUMENT_ROOT . '/app/views/blocks/' . $block . '.php';
     }
 
+
+    public function loadEmailTemplate($template, $data)
+    {
+        $this->data = $data;
+
+        require_once DOCUMENT_ROOT . '/app/views/emails/header.php';
+        require_once DOCUMENT_ROOT . '/app/views/emails/' . $template . '.php';
+        require_once DOCUMENT_ROOT . '/app/views/emails/footer.php';
+    }
+
 }

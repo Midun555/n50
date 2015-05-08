@@ -60,7 +60,8 @@ class AdminModel extends Model
 
         foreach ( $items as $key => $item )
         {
-            $items[$key]['price'] = number_format($item['price'], 2, '.', '');
+            $items[$key]['price']    = number_format($item['price'], 2, '.', '');
+            $items[$key]['subtotal'] = number_format($item['price'] * $item['quantity'], 2, '.', '');
         }
 
         $order[0]['items'] = $items;
