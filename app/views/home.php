@@ -13,7 +13,7 @@
         <h1>Instagram<small> @n50</small></h1>
     </div>
     <div class="row">
-        <?php for ( $i = 0; $i < 12; $i++ ) : ?>
+        <?php for ( $i = 0; $i < 6; $i++ ) : ?>
             <div class="col-sm-2 col-xs-6 n50-bottom-buffer-sm">
                 <a href="#">
                     <img src="/media/products/placeholder.jpg" class="img-responsive">

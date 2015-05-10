@@ -28,6 +28,7 @@
                     <h2 class="n50-fs-lg"><strong>Newsletter</strong></h2>
                 </div>
                 <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                     <form action="/newsletter/signup/" method="post" id="js-newsletter-form">
                         <div class="row">
                             <div class="col-xs-12">

@@ -23,7 +23,7 @@
             <p><?php echo $product['description'] ?></p>
             <form action="/cart/add_item/" method="post">
                 <input type="hidden" name="product_id" value="<?php echo $product['id'] ?>">
-                <p><input type="number" name="quantity" value="1" max="10" min="1" required></p>
+                <p>QTY <input type="number" name="quantity" value="1" max="10" min="1" required></p>
                 <p><input type="submit" value="Add To Cart" class="btn btn-success"></p>
             </form>
         </div>
