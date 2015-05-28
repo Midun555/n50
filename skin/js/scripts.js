@@ -1,5 +1,15 @@
 (function($){
 
+    /**
+     * Pinterest Pinit buttons
+     *
+     * Add a no hover attribute to all images, then remove that attribute for
+     * only PDP main media gallery images that are pinable.
+     */
+    $("img").attr("data-pin-no-hover", true);
+    $("#js-pdp-media-main").removeAttr("data-pin-no-hover");
+
+
     /*
      * Form validations.
      *

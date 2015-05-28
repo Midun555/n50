@@ -56,6 +56,7 @@
 <script src="http://code.jquery.com/jquery-1.11.0-beta1.min.js"></script>
 <script src="/skin/bootstrap/js/bootstrap.min.js"></script>
 <script src="/skin/js/scripts.js"></script>
+<script type="text/javascript" async defer  data-pin-color="red" data-pin-height="28" data-pin-hover="true" src="//assets.pinterest.com/js/pinit.js"></script>
 
 </body>
 </html>
